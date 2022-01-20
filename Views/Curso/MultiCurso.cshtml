@@ -1,0 +1,20 @@
+﻿@* Indica que usaremos un modelo fuertemente tipado *@
+@model IEnumerable<Curso>
+
+@{
+    ViewData["Title"] = "Informacion curso";
+}
+
+<h1>@ViewData["Tittle"]  </h1>
+@* Razor *@
+<strong>Desde la vista parcial</strong>
+
+@* @foreach (var item in Model)
+{
+    <partial name="ObjetoEscuelaSimple" model="item"/>
+} *@
+<partial name="ListaObjetoEscuela"/>
+
+
+
+<p>@ViewBag.Fecha</p>

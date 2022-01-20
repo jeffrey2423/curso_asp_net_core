@@ -1,0 +1,21 @@
+﻿@* Indica que usaremos un modelo fuertemente tipado *@
+@model Curso 
+
+@{
+    ViewData["Title"] = "Informacion Curso";
+}
+
+<h1>@ViewData["Tittle"]  </h1>
+@* Razor *@
+<strong>Desde la vista normal</strong>
+<p>
+    Nombre: @Model.Nombre <br/>
+    Id: @Model.Id
+
+</p>
+
+<strong>Desde la vista parcial</strong>
+<partial name="ObjetoEscuelaSimple" model="@Model"/>
+
+
+<p>@ViewBag.Fecha</p>
